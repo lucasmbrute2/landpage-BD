@@ -2,10 +2,10 @@ import { v4 as uuid } from "uuid"
 
 export class User {
   id?: string;
-  nome!: string;
+  name!: string;
   email!: string;
-  nascimento!: Date;
-  telefone!: string;
+  birthday!: Date;
+  phone!: string;
 
   constructor() {
     if (!this.id) this.id = uuid()
