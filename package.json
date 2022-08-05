@@ -12,7 +12,8 @@
     "test": "jest",
     "dev": "ts-node-dev --respawn --transpile-only src/shared/http/server.ts",
     "typeorm": "ts-node-dev ./node_modules/typeorm/cli",
-    "build": "npx tsc"
+    "build": "npx tsc",
+    "start": "node dist/src/shared/http/server.js"
   },
   "dependencies": {
     "@types/uuid": "^8.3.4",

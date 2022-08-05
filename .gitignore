@@ -4,4 +4,3 @@ coverage/
 yarn.lock
 .editorconfig
 .env
-dist/

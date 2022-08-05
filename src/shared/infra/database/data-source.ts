@@ -5,10 +5,11 @@ import { migrations } from "./migrations";
 
 export const AppDataSource = new DataSource({
   type: "postgres",
-  host: "localhost",
-  port: 5432,
+  host: dotenv.database.host,
+  port: Number(dotenv.server.port),
   username: dotenv.database.username,
   password: dotenv.database.password,
+  database: dotenv.database.database,
   entities: [User],
   migrations,
   logging: true,
