@@ -19,10 +19,11 @@ const User_1 = require("../../../modules/user/entity/User");
 const migrations_1 = require("./migrations");
 exports.AppDataSource = new typeorm_1.DataSource({
     type: "postgres",
-    host: "localhost",
-    port: 5432,
+    host: dontenvEntries_1.default.database.host,
+    port: Number(dontenvEntries_1.default.server.port),
     username: dontenvEntries_1.default.database.username,
     password: dontenvEntries_1.default.database.password,
+    database: dontenvEntries_1.default.database.database,
     entities: [User_1.User],
     migrations: migrations_1.migrations,
     logging: true,
