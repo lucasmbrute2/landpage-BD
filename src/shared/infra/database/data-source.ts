@@ -1,4 +1,4 @@
-import { DataSource, Migration } from "typeorm";
+import { DataSource } from "typeorm";
 import dotenv from "../../../configs/dontenvEntries"
 import { User } from "../../../modules/user/entity/User";
 import { migrations } from "./migrations";
@@ -11,6 +11,8 @@ export const AppDataSource = new DataSource({
   password: dotenv.database.password,
   entities: [User],
   migrations,
+  logging: true,
+  synchronize: true,
   subscribers: []
 })
 
