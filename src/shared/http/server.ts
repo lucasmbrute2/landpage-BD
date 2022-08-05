@@ -25,6 +25,6 @@ app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
 
 createConnection()
 
-app.listen(dontenvConfigs.server.port, () => {
+app.listen(dontenvConfigs.server.port || 3232, () => {
   console.log(`Server is running`);
 })
