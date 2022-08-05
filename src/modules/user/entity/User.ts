@@ -1,11 +1,10 @@
 import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
-import { v4 as uuid } from "uuid"
 
 @Entity()
 export class User {
 
   @PrimaryGeneratedColumn()
-  id?: string;
+  id?: number;
 
   @Column()
   name!: string;
@@ -14,12 +13,12 @@ export class User {
   email!: string;
 
   @Column()
-  birthday!: Date;
+  birthday!: string;
 
   @Column()
   phone!: string;
 
   constructor() {
-    if (!this.id) this.id = uuid()
+    if (!this.id) this.id = Math.floor(Math.random() * 100)
   }
 }

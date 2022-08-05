@@ -16,7 +16,7 @@ describe("Create a user", () => {
     const car = await createUserUseCase.execute({
       name: "Name test",
       email: "Email test",
-      birthday: new Date(2000, 28, 5),
+      birthday: "Date",
       phone: "3191234-1234"
     })
     expect(car).toHaveProperty("id");
@@ -28,14 +28,14 @@ describe("Create a user", () => {
       await createUserUseCase.execute({
         name: "Name test",
         email: "Email test",
-        birthday: new Date(2000, 28, 5),
+        birthday: "Date",
         phone: "3191234-1234"
       })
 
       await createUserUseCase.execute({
         name: "Name test",
         email: "Email test",
-        birthday: new Date(2000, 28, 5),
+        birthday: "Date",
         phone: "3191234-1234"
       })
     }).rejects.toBeInstanceOf(AppError)
