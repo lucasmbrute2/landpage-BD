@@ -26,6 +26,6 @@ app.use((err, req, res, next) => {
     });
 });
 (0, data_source_1.createConnection)();
-app.listen(dontenvEntries_1.default.server.port, () => {
+app.listen(dontenvEntries_1.default.server.port || 3232, () => {
     console.log(`Server is running`);
 });
