@@ -1,6 +1,6 @@
 export interface ICreateUserDTO {
   name: string;
   email: string;
-  birthday: Date;
+  birthday: string;
   phone: string;
 }
