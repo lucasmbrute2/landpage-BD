@@ -36,7 +36,7 @@ describe("List all users", () => {
     })
 
     const users = await listUsersUseCase.execute()
-    expect(users.length >= 1 && users.every(user => user.id)).toBeTruthy()
+    expect(users.length >= 1 && users.every(user => user.id)).toBe(true)
 
   })
 })
