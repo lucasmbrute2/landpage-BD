@@ -11,6 +11,6 @@ export default {
     database: process.env.DB_NAME,
     host: process.env.HOST,
     port: process.env.PORT_DB,
-    url: process.env.HEROKU_POSTGRESQL_COPPER_URL
+    url: process.env.DATABASE_URL
   }
 }
