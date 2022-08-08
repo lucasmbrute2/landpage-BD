@@ -6,9 +6,11 @@ import { createConnection } from "../infra/database/data-source"
 import "../infra/container"
 import { router } from "./routes/user.routes"
 import { AppError } from "../errors/AppError"
+import cors from "cors"
 
 const app = express()
 app.use(express.json())
+app.use(cors())
 app.use(router)
 app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
   if (err instanceof AppError) {
